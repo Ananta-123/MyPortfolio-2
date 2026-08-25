@@ -108,89 +108,288 @@ const About = () => {
       />
 
       <div className="container-custom relative z-10">
+
         {/* =======================================================
-            SECTION HEADER
+            SECTION HEADER + PROFILE PHOTO
         ======================================================= */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="mb-14 max-w-3xl"
+        <div
+          className="
+            mb-14
+            grid
+            items-center
+            gap-10
+            lg:grid-cols-[1fr_360px]
+            lg:gap-16
+          "
         >
-          {/* Small Label */}
+          {/* LEFT — SECTION INTRO */}
 
-          <div className="mb-4 flex items-center gap-3">
-            <span
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+            className="max-w-3xl"
+          >
+            {/* Small Label */}
+
+            <div className="mb-4 flex items-center gap-3">
+              <span
+                className="
+                  h-px
+                  w-10
+                  bg-gradient-to-r
+                  from-[#F96B00]
+                  to-[#C11200]
+                "
+              />
+
+              <span
+                className="
+                  font-mono
+                  text-xs
+                  font-medium
+                  uppercase
+                  tracking-[0.2em]
+                  text-[#F96B00]
+                "
+              >
+                About Me
+              </span>
+            </div>
+
+            {/* Heading */}
+
+            <h2
               className="
-                h-px
-                w-10
-                bg-gradient-to-r
-                from-[#F96B00]
-                to-[#C11200]
+                max-w-3xl
+                font-['Manrope']
+                text-4xl
+                font-extrabold
+                leading-[1.08]
+                tracking-tight
+                text-white
+                sm:text-5xl
+                lg:text-6xl
+                light:text-zinc-950
+              "
+            >
+              Building digital experiences
+              <span
+                className="
+                  bg-gradient-to-r
+                  from-[#F96B00]
+                  to-[#C11200]
+                  bg-clip-text
+                  text-transparent
+                "
+              >
+                {" "}
+                that matter.
+              </span>
+            </h2>
+
+            {/* Description */}
+
+            <p
+              className="
+                mt-5
+                max-w-2xl
+                text-base
+                leading-7
+                text-zinc-400
+                sm:text-lg
+                sm:leading-8
+                light:text-zinc-600
+              "
+            >
+              I'm a Full-Stack MERN Developer passionate about creating
+              modern, scalable and user-focused web applications. I enjoy
+              transforming ideas into clean, functional and responsive
+              digital products.
+            </p>
+          </motion.div>
+
+          {/* =====================================================
+              RIGHT — PROFILE PHOTO
+          ===================================================== */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 40,
+              scale: 0.9,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              scale: 1,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+            className="
+              relative
+              flex
+              items-center
+              justify-center
+              lg:justify-end
+            "
+          >
+            {/* Large Background Glow */}
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                h-64
+                w-64
+                rounded-full
+                bg-[#F96B00]/10
+                blur-[70px]
               "
             />
 
-            <span
+            {/* Decorative Outer Ring */}
+
+            <div
               className="
-                font-mono
-                text-xs
-                font-medium
-                uppercase
-                tracking-[0.2em]
-                text-[#F96B00]
+                relative
+                flex
+                h-[280px]
+                w-[280px]
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#F96B00]/20
+                sm:h-[300px]
+                sm:w-[300px]
               "
             >
-              About Me
-            </span>
-          </div>
+              {/* Rotating Dashed Ring */}
 
-          {/* Heading */}
+              <motion.div
+                animate={{
+                  rotate: 360,
+                }}
+                transition={{
+                  duration: 25,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-[-10px]
+                  rounded-full
+                  border
+                  border-dashed
+                  border-[#F96B00]/25
+                "
+              />
 
-          <h2
-            className="
-              max-w-2xl
-              font-['Manrope']
-              text-4xl
-              font-extrabold
-              tracking-tight
-              sm:text-5xl
-            "
-          >
-            Building digital experiences
-            <span
-              className="
-                bg-gradient-to-r
-                from-[#F96B00]
-                to-[#C11200]
-                bg-clip-text
-                text-transparent
-              "
-            >
-              {" "}
-              that matter.
-            </span>
-          </h2>
+              {/* Decorative Orange Dot */}
 
-          <p
-            className="
-              mt-5
-              max-w-2xl
-              text-base
-              leading-7
-              text-zinc-400
-              sm:text-lg
-              sm:leading-8
-              light:text-zinc-600
-            "
-          >
-            I'm a Full-Stack MERN Developer passionate about creating
-            modern, scalable and user-focused web applications. I enjoy
-            transforming ideas into clean, functional and responsive
-            digital products.
-          </p>
-        </motion.div>
+              <span
+                className="
+                  absolute
+                  right-2
+                  top-8
+                  z-20
+                  h-3
+                  w-3
+                  rounded-full
+                  bg-[#F96B00]
+                  shadow-[0_0_15px_rgba(249,107,0,0.7)]
+                "
+              />
+
+              {/* Decorative Orange Dot */}
+
+              <span
+                className="
+                  absolute
+                  bottom-8
+                  left-1
+                  z-20
+                  h-2.5
+                  w-2.5
+                  rounded-full
+                  bg-[#C11200]
+                  shadow-[0_0_15px_rgba(193,18,0,0.6)]
+                "
+              />
+
+              {/* Photo Container */}
+
+              <div
+                className="
+                  relative
+                  h-[250px]
+                  w-[250px]
+                  overflow-hidden
+                  rounded-full
+                  border-2
+                  border-[#F96B00]/70
+                  bg-zinc-900
+                  shadow-[0_0_45px_rgba(249,107,0,0.16)]
+                  transition-all
+                  duration-500
+                  hover:scale-[1.03]
+                  hover:border-[#F96B00]
+                  hover:shadow-[0_0_60px_rgba(249,107,0,0.25)]
+                  sm:h-[270px]
+                  sm:w-[270px]
+                "
+              >
+                <img
+                  src="https://res.cloudinary.com/dl58sdjnk/image/upload/v1773810370/Gemini_Generated_Image_l2ec1ol2ec1ol2ec_uwzstz.png"
+                  alt="Ananta Prasad Behera"
+                  className="
+                    h-full
+                    w-full
+                    object-cover
+                    object-center
+                  "
+                  loading="lazy"
+                />
+
+                {/* Subtle Image Overlay */}
+
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    inset-0
+                    rounded-full
+                    bg-gradient-to-t
+                    from-black/20
+                    via-transparent
+                    to-transparent
+                  "
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
 
         {/* =======================================================
             MAIN ABOUT GRID
@@ -208,10 +407,21 @@ const About = () => {
           ===================================================== */}
 
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
+            initial={{
+              opacity: 0,
+              x: -30,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
             className="
               relative
               overflow-hidden
@@ -226,7 +436,7 @@ const About = () => {
               light:bg-black/[0.015]
             "
           >
-            {/* Decorative gradient */}
+            {/* Decorative Gradient */}
 
             <div
               className="
@@ -260,7 +470,10 @@ const About = () => {
                 text-[#F96B00]
               "
             >
-              <UserRound size={25} strokeWidth={1.7} />
+              <UserRound
+                size={25}
+                strokeWidth={1.7}
+              />
             </div>
 
             {/* Heading */}
@@ -319,9 +532,17 @@ const About = () => {
               {highlights.map((item, index) => (
                 <motion.div
                   key={item}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  initial={{
+                    opacity: 0,
+                    x: -10,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
                   transition={{
                     duration: 0.4,
                     delay: index * 0.05,
@@ -356,6 +577,7 @@ const About = () => {
           ===================================================== */}
 
           <div className="grid gap-6">
+
             {/* =================================================
                 STATS
             ================================================= */}
@@ -364,9 +586,18 @@ const About = () => {
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 25 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
+                  initial={{
+                    opacity: 0,
+                    y: 25,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.2,
+                  }}
                   transition={{
                     duration: 0.5,
                     delay: index * 0.08,
@@ -389,7 +620,7 @@ const About = () => {
                     light:bg-black/[0.015]
                   "
                 >
-                  {/* Hover glow */}
+                  {/* Hover Glow */}
 
                   <div
                     className="
@@ -446,10 +677,21 @@ const About = () => {
             ================================================= */}
 
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7 }}
+              initial={{
+                opacity: 0,
+                x: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              transition={{
+                duration: 0.7,
+              }}
               className="
                 relative
                 overflow-hidden
@@ -532,9 +774,17 @@ const About = () => {
                   return (
                     <motion.div
                       key={item.title}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
+                      initial={{
+                        opacity: 0,
+                        y: 10,
+                      }}
+                      whileInView={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      viewport={{
+                        once: true,
+                      }}
                       transition={{
                         duration: 0.4,
                         delay: index * 0.08,
@@ -608,7 +858,15 @@ const About = () => {
 
               {/* Bottom Link */}
 
-              <div className="mt-7 border-t border-white/[0.07] pt-5 light:border-black/[0.07]">
+              <div
+                className="
+                  mt-7
+                  border-t
+                  border-white/[0.07]
+                  pt-5
+                  light:border-black/[0.07]
+                "
+              >
                 <button
                   type="button"
                   onClick={() => {
@@ -654,10 +912,21 @@ const About = () => {
         ======================================================= */}
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+            delay: 0.15,
+          }}
           className="
             mt-6
             overflow-hidden

@@ -19,9 +19,9 @@ const experiences = [
   {
     id: 1,
     role: "Full-Stack MERN Developer",
-    company: "Professional Development",
+    company: "Utkalika",
     type: "Full-Time / Project Based",
-    location: "India",
+    location: "Odisha, India",
     duration: "Present",
     current: true,
 
@@ -70,9 +70,76 @@ const experiences = [
       },
     ],
   },
-
   {
     id: 2,
+
+    role: "MERN Stack Developer",
+
+    company: "MoovOn Service & Solutions",
+
+    type: "Professional Experience",
+
+    location: "India",
+
+    duration: "Previous",
+
+    current: false,
+
+    description:
+      "Developing full-stack SaaS applications using the MERN stack with a strong focus on responsive interfaces, performance, scalability, security, and clean maintainable architecture.",
+
+    responsibilities: [
+      "Develop full-stack SaaS applications using MongoDB, Express.js, React.js, and Node.js.",
+
+      "Build responsive user interfaces using React.js and Tailwind CSS with a focus on usability and performance.",
+
+      "Integrate RESTful APIs and manage client-server communication and application state.",
+
+      "Implement pagination and optimize data rendering for large datasets.",
+
+      "Develop frontend Role-Based Access Control (RBAC) for permission-based navigation and protected routes.",
+
+      "Create reusable and scalable React components following modern development practices.",
+
+      "Contribute to backend development including API creation and database integration under senior guidance.",
+
+      "Collaborate with cross-functional teams to deliver SaaS features and product enhancements.",
+
+      "Maintain modular code and continuously improve application performance and scalability.",
+    ],
+
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
+      "RBAC",
+    ],
+
+    highlights: [
+      {
+        icon: Code2,
+        title: "Frontend",
+        text: "React + Tailwind",
+      },
+      {
+        icon: Server,
+        title: "Backend",
+        text: "Node + Express",
+      },
+      {
+        icon: Database,
+        title: "Database",
+        text: "MongoDB",
+      },
+    ],
+  },
+
+  {
+    id: 3,
     role: "Frontend Development Intern",
     company: "Ervon Technology",
     type: "Internship",
@@ -792,7 +859,7 @@ const ExperienceCard = ({ experience, index }) => {
             OPTIONAL COMPANY LINK
         =================================================== */}
 
-        {experience.company === "Ervon Technology" && (
+        {/* {experience.company === "Ervon Technology" && (
           <div className="relative mt-6">
             <a
               href="#"
@@ -819,7 +886,7 @@ const ExperienceCard = ({ experience, index }) => {
               />
             </a>
           </div>
-        )}
+        )} */}
       </div>
     </motion.div>
   );

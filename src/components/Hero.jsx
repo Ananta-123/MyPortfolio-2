@@ -7,6 +7,7 @@ import {
   Check,
 } from "lucide-react";
 import {GithubIcon, LinkedinIcon} from "./icons/BrandIcons.jsx"
+import resume from "../../public/documents/anantaResume.pdf"
 
 const Hero = () => {
   const handleScrollToProjects = () => {
@@ -197,13 +198,14 @@ const Hero = () => {
                   via-[#F04A00]
                   to-[#C11200]
                   bg-clip-text
+                  text-[3.5rem]
                   text-transparent
                 "
               >
                 Ananta Prasad
               </span>
 
-              <span className="mt-2 block text-white light:text-zinc-950">
+              <span className="mt-2 block text-white light:text-zinc-950 text-[3.5rem]">
                 Behera
               </span>
             </motion.h1>
@@ -322,7 +324,7 @@ const Hero = () => {
               {/* Resume */}
 
               <a
-                href="/resume.pdf"
+                href={resume}
                 download
                 className="
                   btn
@@ -376,7 +378,7 @@ const Hero = () => {
               {/* GitHub */}
 
               <a
-                href="https://github.com/"
+                href="https://github.com/Ananta-123"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -409,7 +411,7 @@ const Hero = () => {
               {/* LinkedIn */}
 
               <a
-                href="https://www.linkedin.com/feed/"
+                href="https://www.linkedin.com/in/ananta-prasad-behera-4561ba254/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="

@@ -8,6 +8,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import {GithubIcon, LinkedinIcon} from "./icons/BrandIcons.jsx"
+import resume from "../../public/documents/anantaResume.pdf"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -176,7 +177,7 @@ const Navbar = () => {
             <div className="hidden items-center gap-2 md:flex">
               {/* GitHub */}
               <a
-                href="https://github.com/"
+                href="https://github.com/Ananta-123"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -202,7 +203,7 @@ const Navbar = () => {
 
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/feed/"
+                href="https://www.linkedin.com/in/ananta-prasad-behera-4561ba254/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -227,7 +228,7 @@ const Navbar = () => {
               </a>
 
               {/* Theme Toggle */}
-              <button
+              {/* <button
                 type="button"
                 onClick={toggleTheme}
                 aria-label={
@@ -257,11 +258,11 @@ const Navbar = () => {
                 ) : (
                   <Sun size={19} strokeWidth={1.8} />
                 )}
-              </button>
+              </button> */}
 
               {/* Resume Button */}
               <a
-                href="/resume.pdf"
+                href={resume}
                 download
                 className="
                   ml-3
