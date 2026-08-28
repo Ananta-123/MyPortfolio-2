@@ -443,7 +443,7 @@ const Navbar = () => {
               </a>
 
               {/* Theme */}
-              <button
+              {/* <button
                 type="button"
                 onClick={toggleTheme}
                 aria-label="Toggle theme"
@@ -471,7 +471,7 @@ const Navbar = () => {
                 ) : (
                   <Sun size={19} />
                 )}
-              </button>
+              </button> */}
 
               {/* Mobile Resume */}
               <a
